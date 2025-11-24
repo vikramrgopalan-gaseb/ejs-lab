@@ -64,10 +64,10 @@ app.get('/menu', (req, res) => {
 });
 
 app.get('/menu/:category', (req, res) => {
-  const menuItems = req.params.category
+  const category = req.params.category
   res.render('category.ejs', {
-    category: RESTAURANT.menu.filter()
-    name: RESTAURANT.menu.name
+    menuItems: RESTAURANT.menu.filter(item => item.category === category),
+    name: category[0].toUpperCase() + category.slice(1)
 });
 });
 
