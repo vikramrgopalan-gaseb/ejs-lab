@@ -11,10 +11,9 @@
   <ul>
         <% menu.forEach((item, index) => { %>
             <a href="/<%= index %>">
-                <li><%= menu.name %></li>
-                <li><%= menu.price %></li>
-                <li><%= menu.rating</li>
-                <li><%= menu.details</li>
+                <li><%= item.name %></li>
+                <li>Price: $<%= item.price %> Rating: <%= item.rating %></li>
+                <li>Details: <%= item.details %></li>
             </a>
         <% }) %>
     </ul>
