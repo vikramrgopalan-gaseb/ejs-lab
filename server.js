@@ -57,6 +57,10 @@ app.get('/', (req, res) => {
 })
 });
 
-
+app.get('/:menu', (req, res) => {
+  res.render('menu.ejs', {
+  item: menu[index]
+});
+});
 
 app.listen(3000);
