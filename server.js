@@ -63,4 +63,12 @@ app.get('/menu', (req, res) => {
 });
 });
 
+app.get('/menu/:category', (req, res) => {
+  const menuItems = req.params.category
+  res.render('category.ejs', {
+    category: RESTAURANT.menu.filter()
+    name: RESTAURANT.menu.name
+});
+});
+
 app.listen(3000);
